@@ -1,4 +1,5 @@
 //selecting all required elements
+const redirectetape = document.getElementById('redirectetape')
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -92,12 +93,12 @@ function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     let img_tag = '<img class="img_quest" src="'+ questions[index].image +'">';
-    // let audio_tag ='<audio style="display:none" controls autoplay><source src="'+ questions[index].audio +'" type="audio/mpeg"></audio>'
+    let audio_tag ='<audio style="display:none" controls autoplay><source src="'+ questions[index].audio +'" type="audio/mpeg"></audio>'
     let que_tag = '<center><span>'+ questions[index].question +'</span></center>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>';
     que_text.innerHTML = que_tag; 
-    // que_text.innerHTML += audio_tag
+    que_text.innerHTML += audio_tag
     que_text.innerHTML += img_tag; 
     option_list.innerHTML = option_tag; 
     
@@ -150,17 +151,16 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore == 40){ 
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
-        scoreText.innerHTML = scoreTag; 
-    }
-    else if(userScore > 30){ 
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+    if (userScore >= 32){ 
+        let scoreTag = '<span>تهانينا لقد اجبت على <p>'+ userScore +'</p> من <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
+        redirectetape.innerHTML ='<button class="quit"><a href="Registre.html?score='+userScore+'">المتابعة</a></button>'
+
     }
     else{ 
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>للاسف تحصلت فقط على <p>'+ userScore +'</p> من <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
+        redirectetape.innerHTML ='<button class="quit"><a href="landing_page.html">الرئيسية</a></button>'
     }
 }
 
@@ -206,6 +206,6 @@ function startTimerLine(time){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    let totalQueCounTag = '<span><p>'+ index +'</p> من <p>'+ questions.length +'</p> سؤال</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
