@@ -1,66 +1,37 @@
-# Permis de Conduire
+# Driving License Exam App
 
-## Contexte du projet
+A **desktop application** built with **Node.js** and **Electron** to assist users in preparing for their driving license exams. The app features interactive quizzes, a comprehensive question bank, and progress tracking to ensure effective learning.
 
-```
-Pour façliter l'obtention du permis de conduire au Maroc, Narsa a lancé un appel d'offre pour la création d'une application desktop qui va être déployé dans tous les réseaux narsa au Maroc.
+---
 
-Pour ce faire vous êtes invités à créer une application bureau multi plateforme en Electron Js qui va permetre de:
+## Features
 
-choisir le type de parmis qui'il va passer, par exemple le candidat doit choisir entre permis type B de voiture ou camion type A
+- 🎯 **Interactive Quizzes**: Practice questions designed to simulate real exams.  
+- 📚 **Comprehensive Question Bank**: Covers traffic rules, road signs, and safety tips.  
+- 📊 **Progress Tracking**: Monitor your performance and identify areas for improvement.  
+- 🌐 **Offline Mode**: Use the app without needing an internet connection.  
 
-le Candidature doit répondre au minimum sur 30/40 questions
+---
 
-si le candidat réussi le test, une nouvelle fenêtre s'affiche pour enregistrer ses coordonnées
+## Tech Stack
 
-le système enregistre toutes les informations des candidats admis
+- **Frontend**: [Electron.js](https://www.electronjs.org/)  
+- **Backend**: [Node.js](https://nodejs.org/)  
+- **Database**: JSON (for lightweight storage)  
+- **Design**: HTML, CSS, and JavaScript  
 
-le responsable de l'exam va consulter via son interface les statistiques et les informations de chaque candidate
+---
 
-```
+## Installation
 
-## Travail demandé :
+### Prerequisites
 
-• Développer votre application Monpremis à laide d'une SGBD de votre choix
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- yarn (comes with Node.js)
 
-• créer le code nécessaire en Node js pour enregistrer et afficher les questions de chaque exam
+### Steps to Install and Run
 
-• Déployer votre application pour qu'elle soit exploitable dans tous le réseau narsa
-
-• NB:
-
-la question peut être sous forme de text ou vidéo
-
-chaque question a un compteur de 30 secondes, si le candidat ne répond pas dans 30 seconde la réponse et fausse
-
-## Learning methods
-
-```
-Travail en binôme
-
-Dernier Délai : 15/04/2022
-
-```
-
-## Performance criteria
-
-```
-Création d'une application qui répond aux critères demandées
-Organiser et Argumenter le code de votre solution
-
-```
-
-## Assessment methods
-
-```
-Code exécutable avec explication de la solution
-
-```
-
-## How to run this project
-
-```
--- First Start driving-backend : 
+1. First Start driving-backend : 
 Use this command to install the necessary dependencies
 
 1 . yarn install
@@ -78,7 +49,37 @@ And this command to run projet
 
 2 . yarn start
 
+---
 
-```
+## Contributing
 
-## Simulation
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request and describe your changes.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgements
+
+- Built with [Electron](https://www.electronjs.org) and [Node.js](https://nodejs.org).  
+- Inspired by official driving license exam formats.  
+- Icons provided by [FontAwesome](https://fontawesome.com).
